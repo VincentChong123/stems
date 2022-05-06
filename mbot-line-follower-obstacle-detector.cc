@@ -57,7 +57,7 @@ void setup() {
   rgbled_7.setColor(0,0,0,0);
   rgbled_7.show();
   power = 35;
-  pturn = 30;
+  pturn = 35;
   pedal_time = 0.2;
   steering_time = 0.15;
   while(!((0 ^ (analogRead(A7) > 10 ? 0 : 1))))
@@ -66,7 +66,7 @@ void setup() {
   }
 
   move(1, 50 / 100.0 * 255);
-  _delay(1);
+  _delay(0.1);
   move(1, 0);
   while(1) {
       distance = ultrasonic_3.distanceCm();
